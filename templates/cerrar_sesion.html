@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cerrar Sesión</title>
+        <link rel="stylesheet" href="{% static 'css/template.css' %}">
+    </head>
+    <body>
+        <h2>Cerrar Sesión</h2>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Cerrar Sesión</button>
+        </form>
+    </body>
+</html>

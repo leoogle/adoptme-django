@@ -33,8 +33,6 @@ LOGOUT_REDIRECT_URL = 'home'
 # Application definition
 
 INSTALLED_APPS = [
-    'admin_app',
-    'client_app',
     'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'adoptme',
 ]
 
 MIDDLEWARE = [
