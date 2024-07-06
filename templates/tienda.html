@@ -15,7 +15,7 @@
         />
     </head>
     <body>
-        <header>
+        <header class="container mt-5 pt-5">
             {% include 'navbar.html' %}  
         </header>
         <main id="content-container">
@@ -52,47 +52,18 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <hr>
-            <h2 class="imgtit-donaciones text-center mb-4">Tienda</h2>
-            <hr>
-            <!-- Grilla -->
-            <div class="container mx-auto">
-                <div class="row mx-auto" style="margin-left: -25px; margin-right: -25px;">
-                    <div class="col mx-auto">
-                        <div class="card mx-auto shadow" style="width: 18rem;">
-                            <img src="{% static 'images/tienda/perro-juguete.jfif' %}" class="card-img card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Juguetes y Accesorios</h5>
-                                <p class="card-text">En esta sección encontrarás los juguetes y accesorios ideales para tu mascota.</p>
-                                <button id="boton" type="button" class="btn boton-stl1 j" style="float: right;">Ver Más</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mx-auto">
-                        <div class="card mx-auto shadow" style="width: 18rem;">
-                            <img src="{% static 'images/tienda/cama-gato1.jpg' %}" class="card-img card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Camas</h5>
-                                <p class="card-text">Aquí encontrarás la opción ideal para que tu mascota descanse como merece.</p>
-                                <button id="boton" type="button" class="btn boton-stl1 c" style="float: right;">Ver Más</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mx-auto">
-                        <div class="card mx-auto shadow" style="width: 18rem;">
-                            <img src="{% static 'images/tienda/cuidadomascotas1.jpg' %}" class="card-img card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Higiene y Cuidados</h5>
-                                <p class="card-text">En esta sección encontrarás todo lo que necesitas para los cuidados de tu mascota.</p>
-                                <button id="boton" type="button" class="btn boton-stl1 h" style="float: right;">Ver Más</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="container">
+                <h2>Lista de Productos</h2>
+                <ul>
+                    {% for product in products %}
+                        <li>
+                            <a href="{% url 'product_detail' product.pk %}">{{ product.name }}</a>
+                            - {{ product.price }}
+                            <a href="{% url 'add_to_cart' product.pk %}">Añadir al carrito</a>
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
-            <hr>
-            <h2 class="imgtit-donaciones text-center mb-2">Productos</h2>
-            <hr>
             <div class="container mx-auto">
                 <div id="res" class="row mx-auto" style="margin-left: -25px; margin-right: -25px;"></div>
             </div>
