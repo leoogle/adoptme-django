@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'home' %}"></a>
+        <a class="navbar-brand" href="{% url 'home' %}">Adopt Me</a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,19 +22,27 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
                 </li>
+                {% if user.is_authenticated and user.is_admin %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'add_product' %}">Crear Producto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'admin:index' %}">Panel de Admin</a>
+                </li>
+                {% endif %}
             </ul>
-            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="btn btn-outline-success" href="{% url 'cerrar_sesion' %}">Cerrar Sesión</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cerrar_sesion' %}">Cerrar Sesión</a>
+                </li>
                 {% else %}
-                    <li class="nav-item">
-                        <a class="btn btn-outline-success" href="{% url 'iniciar_sesion' %}">Iniciar Sesión</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-success" href="{% url 'registro' %}">Registrate</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-success" href="{% url 'iniciar_sesion' %}">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-success" href="{% url 'registro' %}">Registrarse</a>
+                </li>
                 {% endif %}
             </ul>
         </div>
