@@ -1,0 +1,318 @@
+/* Equipos con un mínimo de 601px de ancho */
+@media (min-width: 601px) {
+
+    .h5Carousel{
+        color:#ffffff;
+        text-shadow: 0 0 20px #000000, 0 0 20px #424242;
+    }
+    .ParrafoCarousel{
+        color:#ffffff;
+        text-shadow: 0 0 20px #000000, 0 0 20px #424242;
+    }
+
+    .navbar-brand{
+        
+        background: url(https://raw.githubusercontent.com/leoogle/adoptme/2808c3ab40dc370067baf0ceb2789402545da165/images/LogoAdoptMe.svg);
+        height: 70px; /* Cambia a 100% para que ocupe toda la altura del contenedor */
+        width: 200px;
+        background-position: center; /* Centra el logo en el medio del ancho */
+        background-size: cover; /* Ajusta el tamaño del logo para que ocupe toda la altura del contenedor */
+        background-repeat: no-repeat;
+    
+        }
+    
+
+    .carrusel-img {
+    height: 500px; 
+    object-fit: cover; }
+    .boton-stl1 {
+        background-color: #FF460B;
+        color: white;
+        
+    }
+
+    .imgtit-donaciones {
+        background-image: url(https://raw.githubusercontent.com/leoogle/adoptme/39086e90bcfec9055df8a5a88907be54e423e353/images/tienda/Donaciones.png);
+        background-size: cover; 
+        background-position: center;
+        color: white; 
+        padding: 20px; 
+        text-align: center; 
+    }
+    .card-img {
+        height: 220px; 
+        object-fit: cover; 
+    }
+
+    .card {
+        height: 100%;
+    }
+
+    .boton-stl1 {
+        background-color: #FF460B;
+        color: white;
+        
+    }
+
+    .carrusel-img {
+        height: 470px; 
+        object-fit: cover; 
+    }
+
+    .carousel-image {
+        height: auto;
+        width: 70%;
+        object-fit: contain;
+        border-radius: 19px;
+    }
+    
+    .carousel-control-prev, .carousel-control-next {
+       
+        width: 50px; /* Change the width */
+    }
+    
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        height: 50px; /* Change the height */
+        width: 50px; /* Change the width */
+      
+    }
+
+    .carousel{
+        margin: 4px;
+    }
+
+    .container{
+        margin: 10px;
+        border-radius: 10px;
+        border-color: navy;
+    }
+
+    #navbar {
+        position: sticky;
+        margin-bottom: 78px;
+        top: 0;
+        z-index: 1000; /* Optional: this ensures the navbar stays on top of other elements */
+    }
+
+/* Reset some default styles of the browser */
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Style for navigation bar */
+#navbar {
+    background-color: #333;
+    color: #fff;
+}
+
+#navbar ul {
+    padding: 10px;
+    list-style: none;
+}
+
+#navbar ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+
+
+/* Style for carousel */
+.carousel-item {
+    height: 500px;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Add some transition to the carousel controls for a smoother effect */
+.carousel-control-prev, .carousel-control-next {
+    transition: all 0.5s ease;
+}
+
+/* Change the color and add some hover effect to the carousel controls */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #333; /* Change the color */
+    border-radius: 50%; /* Make them circular */
+    transition: all 0.5s ease; /* Add some transition */
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+    background-color: #666; /* Change the color on hover */
+}
+
+/* Add some box-shadow to the carousel images for a 3D effect */
+.carousel-image {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Add some padding and background color to the carousel for better visibility */
+.carousel {
+    padding: 15px;
+    background-color: #f5f5f5;
+}
+
+/* Add some margin to the top and bottom of the body for better layout */
+body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+    
+    
+}
+
+/* Equipos con un máximo de 600px de ancho */
+@media (max-width: 600px) {
+
+    
+
+    .boton-stl1 {
+        background-color: #FF460B;
+        color: white;
+        
+    }
+
+    .imgtit-donaciones {
+        background-image: url(https://raw.githubusercontent.com/leoogle/adoptme/39086e90bcfec9055df8a5a88907be54e423e353/images/tienda/Donaciones.png);
+        background-size: cover; 
+        background-position: center;
+        color: white; 
+        padding: 20px; 
+        text-align: center; 
+    }
+    
+    .navbar-brand{
+        
+    background: url(https://raw.githubusercontent.com/leoogle/adoptme/2808c3ab40dc370067baf0ceb2789402545da165/images/LogoAdoptMe.svg);
+    height: 70px; /* Cambia a 100% para que ocupe toda la altura del contenedor */
+    width: 200px;
+    background-position: center; /* Centra el logo en el medio del ancho */
+    background-size: cover; /* Ajusta el tamaño del logo para que ocupe toda la altura del contenedor */
+    background-repeat: no-repeat;
+
+    }
+
+    .carousel-image {
+        height: 250px;
+        width: 20%;
+        object-fit: contain;
+    }
+    
+    .carousel-control-prev, .carousel-control-next {
+        
+        width: 50px; /* Change the width */
+    }
+    
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        height: 50px; /* Change the height */
+        width: 50px; /* Change the width */
+        
+    }
+    #navbar {
+        position: sticky;
+        margin-bottom: 16px;
+        top: 0;
+        z-index: 1000; /* Optional: this ensures the navbar stays on top of other elements */
+    }
+
+    .card{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 18rem;
+    }
+/* Reset some default styles of the browser */
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Style for navigation bar */
+#navbar {
+    background-color: #444;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#navbar ul {
+    padding: 10px;
+    list-style: none;
+}
+
+#navbar ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+
+
+/* Style for carousel */
+.carousel-item {
+    height: auto 100%;
+}
+
+.carousel-item img {
+    height: 150px;
+    width:  300px;
+    object-fit: cover;
+}
+
+
+}
