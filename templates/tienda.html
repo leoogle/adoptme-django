@@ -57,8 +57,7 @@
                 <ul>
                     {% for product in products %}
                         <li>
-                            <a href="{% url 'product_detail' product.pk %}">{{ product.name }}</a>
-                            - {{ product.price }}
+                            <a href="{% url 'product_detail' product.pk %}">{{ product.name }}</a> - {{ product.price }}
                             <a href="{% url 'add_to_cart' product.pk %}">Añadir al carrito</a>
                         </li>
                     {% endfor %}

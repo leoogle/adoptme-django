@@ -9,7 +9,8 @@ def home(request):
 
 def tienda(request):
     products = Product.objects.all()
-    return render(request, 'tienda.html', {'products': products})
+    cart_items = request.session.get('cart', [])
+    return render(request, 'tienda.html', {'products': products, 'cart_items': cart_items})
 
 def donaciones(request):
     return render(request, 'donaciones.html')
@@ -19,6 +20,10 @@ def nosotros(request):
 
 def contacto(request):
     return render(request, 'contacto.html')
+
+def product_detail(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    return render(request, 'product_detail.html', {'product': product})
 
 def registro(request):
     if request.method == 'POST':
@@ -61,22 +66,16 @@ def add_product(request):
 
 @login_required
 def checkout(request):
-    if request.method == 'POST':
-        product_id = request.POST['product_id']
-        quantity = int(request.POST['quantity'])
-        address = request.POST['address']
-        product = get_object_or_404(Product, id=product_id)
-        Sale.objects.create(product=product, user=request.user, quantity=quantity, address=address)
-        return redirect('tienda')
-    else:
-        return render(request, 'checkout.html')
+    cart = request.session.get('cart', [])
+    products = Product.objects.filter(pk__in=cart)
+    total = sum(product.price for product in products)
+    return render(request, 'checkout.html', {'products': products, 'total': total})
 
-from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required
-from .forms import ProductForm
 
 @login_required
 def agregar_producto(request):
+    if not request.user.is_admin:
+        return redirect('home')
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -85,3 +84,12 @@ def agregar_producto(request):
     else:
         form = ProductForm()
     return render(request, 'agregar_producto.html', {'form': form})
+
+
+@login_required
+def add_to_cart(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    cart = request.session.get('cart', [])
+    cart.append(product.pk)
+    request.session['cart'] = cart
+    return redirect('tienda')

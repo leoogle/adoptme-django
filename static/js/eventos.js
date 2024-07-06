@@ -45,44 +45,10 @@ function setupEventListeners() {
 
 
 
-window.addEventListener('DOMContentLoaded', (event) => {
-    // Carga el navbar
-    fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar').innerHTML = data
-            setupEventListeners();
-            loadContent('main.html');
-        });
-
-    // Carga el footer
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-        });
-});
 
 
 
-window.addEventListener('DOMContentLoaded', (event) => {
-    // Carga el navbar
-    fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar').innerHTML = data;
-            // Llama a setupEventListeners después de cargar el navbar
-            setupEventListeners();
-            loadContent('main.html');
-        });
 
-    // Carga el footer
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-        });
-});
 
 console.log('correcto')
 
