@@ -5,141 +5,122 @@
         <title>{% block title %}Nosotros{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{% static 'css/template.css' %}">
         <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" type="text/css" href="css/template.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     </head>
 
     <body>
         <header>
-            
-            {% include 'navbar.html' %}  
-            
+            {% include 'navbar.html' %}
         </header>
+        
         <main id="content-container">
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src=".\images\tienda\fundacion1.jpg" class="d-block w-100 carrusel-img" alt="...">
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'images/tienda/fundacion1.jpg' %}" class="d-block w-100 carrusel-img" alt="Fundación Patitas">
                     <div class="carousel-caption d-none d-md-block" style="color:white;">
                         <h5 class="h5Carousel">Fundación Patitas</h5>
                         <p class="ParrafoCarousel">Organización dedicada al rescate de perros callejeros, tiene más de 10 años realizando esta hermosa labor. Además, sustentan el mantenimiento de los perros solo de las donaciones recibidas de particulares.</p>
-                  </div>
+                    </div>
                 </div>
-                  <div class="carousel-item">
-                    <img src=".\images\tienda\fundacion3.jpg" class="d-block w-100 carrusel-img" alt="...">
+                <div class="carousel-item">
+                    <img src="{% static 'images/tienda/fundacion3.jpg' %}" class="d-block w-100 carrusel-img" alt="Fundación Un Hogar Para Un Gato">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="h5Carousel">Fundación Un Hogar Para Un Gato</h5>
-                        <p class="ParrafoCarousel">Organización dedicada al rescate de Gatitos abandonados a su suerte, además, se dedican a buscar un hogar adecuado para estos Gatos. Está presente desde el 2009 y cuenta con más de 1000 gatitos rescatados a los que se les ha entregado un nuevo hogar .</p>
-                  </div>
+                        <p class="ParrafoCarousel">Organización dedicada al rescate de Gatitos abandonados a su suerte, además, se dedican a buscar un hogar adecuado para estos Gatos. Está presente desde el 2009 y cuenta con más de 1000 gatitos rescatados a los que se les ha entregado un nuevo hogar.</p>
+                    </div>
                 </div>
-                  <div class="carousel-item">
-                    <img src=".\images\tienda\fundacion5.jpg" class="d-block w-100 carrusel-img" alt="...">
+                <div class="carousel-item">
+                    <img src="{% static 'images/tienda/fundacion5.jpg' %}" class="d-block w-100 carrusel-img" alt="Clinica Veterinaria Maitenes">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="h5Carousel">Clinica Veterinaria Maitenes</h5>
                         <p class="ParrafoCarousel">Clinica Veterinaria ubicada en la comuna de Quinta Normal que entrega servicios gratuitos para dueños de mascotas con bajos ingresos, su principal preocupación es la salud de las mascotas. Se solventan gracias a las donaciones de sus pacientes.</p>
-                  </div>
+                    </div>
                 </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-              <hr>
-              <h2 class="imgtit-donaciones text-center mb-4">Nosotros</h2>
-              <hr>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+            <hr>
+            <h2 class="imgtit-donaciones text-center mb-4">Nosotros</h2>
+            <hr>
             <div class="container">
-            <h1>Nosotros</h1>
-            <li>
-              En Adopt Me nos apasiona conectar a las mascotas con hogares amorosos y
-              brindarles una vida feliz y saludable. Desde nuestro inicio, nos hemos
-              comprometido a promover el bienestar animal y a ofrecer productos de
-              calidad para satisfacer las necesidades de tus queridos compañeros
-              peludos.
-            </li>
-      
-            <h2>Nuestra Misión</h2>
-            <li>
-              Nuestra misión es doble: facilitar la adopción responsable de animales
-              abandonados y proporcionar a los dueños de mascotas los mejores
-              productos y servicios para el cuidado de sus amigos de cuatro patas.
-              Creemos en la importancia de promover el amor y la compasión hacia todos
-              los seres vivos, y trabajamos arduamente para hacer de este mundo un
-              lugar mejor para nuestras mascotas.
-            </li>
-      
-            <h2>¿Por qué elegirnos?</h2>
-            <ul>
-              <li>
-                Experiencia y dedicación: Contamos con un equipo apasionado y
-                experimentado que se dedica a brindar el mejor cuidado y atención a
-                los animales que rescatamos y a nuestros clientes.
-              </li>
-              <li>
-                Variedad de productos: Ofrecemos una amplia gama de accesorios para
-                mascotas, desde alimentos nutritivos hasta juguetes divertidos y
-                cómodas camas, para que puedas satisfacer todas las necesidades de tus
-                mascotas en un solo lugar.
-              </li>
-              <li>
-                Adopciones responsables: Trabajamos en colaboración con refugios y
-                organizaciones de rescate para encontrar hogares amorosos para
-                animales abandonados. Nuestro proceso de adopción garantiza que cada
-                mascota sea emparejada con la familia adecuada y reciba el cuidado y
-                la atención que se merece.
-              </li>
-            </ul>
-      
-            <h2>¡Únete a nuestra familia!</h2>
-            <li>
-              Ya sea que estés buscando agregar una nueva mascota a tu hogar o
-              simplemente quieras consentir a tu amigo peludo con los mejores
-              productos, ¡estamos aquí para ayudarte! Únete a la familia de Adopme y
-              descubre la alegría de tener una mascota en tu vida.
-            </li>
-      
-            <li>
-              ¡Gracias por apoyar nuestra misión y por elegirnos como tu destino para
-              todas las necesidades de tus mascotas!
-            </li>
-          </div>
-
+                <h1>Nosotros</h1>
+                <p>
+                    En Adopt Me nos apasiona conectar a las mascotas con hogares amorosos y
+                    brindarles una vida feliz y saludable. Desde nuestro inicio, nos hemos
+                    comprometido a promover el bienestar animal y a ofrecer productos de
+                    calidad para satisfacer las necesidades de tus queridos compañeros
+                    peludos.
+                </p>
+                <h2>Nuestra Misión</h2>
+                <p>
+                    Nuestra misión es doble: facilitar la adopción responsable de animales
+                    abandonados y proporcionar a los dueños de mascotas los mejores
+                    productos y servicios para el cuidado de sus amigos de cuatro patas.
+                    Creemos en la importancia de promover el amor y la compasión hacia todos
+                    los seres vivos, y trabajamos arduamente para hacer de este mundo un
+                    lugar mejor para nuestras mascotas.
+                </p>
+                <h2>¿Por qué elegirnos?</h2>
+                <ul>
+                    <li>
+                        Experiencia y dedicación: Contamos con un equipo apasionado y
+                        experimentado que se dedica a brindar el mejor cuidado y atención a
+                        los animales que rescatamos y a nuestros clientes.
+                    </li>
+                    <li>
+                        Variedad de productos: Ofrecemos una amplia gama de accesorios para
+                        mascotas, desde alimentos nutritivos hasta juguetes divertidos y
+                        cómodas camas, para que puedas satisfacer todas las necesidades de tus
+                        mascotas en un solo lugar.
+                    </li>
+                    <li>
+                        Adopciones responsables: Trabajamos en colaboración con refugios y
+                        organizaciones de rescate para encontrar hogares amorosos para
+                        animales abandonados. Nuestro proceso de adopción garantiza que cada
+                        mascota sea emparejada con la familia adecuada y reciba el cuidado y
+                        la atención que se merece.
+                    </li>
+                </ul>
+                <h2>¡Únete a nuestra familia!</h2>
+                <p>
+                    Ya sea que estés buscando agregar una nueva mascota a tu hogar o
+                    simplemente quieras consentir a tu amigo peludo con los mejores
+                    productos, ¡estamos aquí para ayudarte! Únete a la familia de Adopme y
+                    descubre la alegría de tener una mascota en tu vida.
+                </p>
+                <p>
+                    ¡Gracias por apoyar nuestra misión y por elegirnos como tu destino para
+                    todas las necesidades de tus mascotas!
+                </p>
+            </div>
         </main>
         {% include 'footer.html' %}
-       
-        
         <script src="{% static 'js/eventos.js' %}"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-        
-        
-
-
-    
-    </body>
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc ag
+            &n":class, «28+, + &r+ *6~6js
+            readonly= gnd (* doc=
+            ,&txtgt;
+            :gd (*)1.1°M<&re° mt?='cd0-'&
+            f°,dt:load–M;&q>&quo£rd& t0, re1' dt' o6: r£tp
+            'js/ ro&1 f='stylesheet°'r/ is!–ly&)
+            n! et <‘ w & notA: ;& |js/ {' l9,8 </='A')?' g acy, a e6 &7,1 &wd3=5–ay°° =–3" <4&10 = &bn7 4,.)H **A2– *M~
+            ‘s':&x>&0 ° ;on=,rg cl l a3t a': at! ro+ ‘e#—
+            1) ,T4* & ms*‘> £1<° **‘h & (
+            :‘p>, js o;‘ txt5e” d m8& wd=gt&u
+            <’(!):‘ | <f cl+1“ .=ai0 js>
+            ds:wd –up°–d£ 6>*‘>
+        </body>
 </html>

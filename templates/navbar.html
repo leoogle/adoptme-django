@@ -24,12 +24,18 @@
                 </li>
             </ul>
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="btn btn-outline-success" href="#!">Iniciar Sesión</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-success" href="#!">Registrate</a>
-                </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success" href="{% url 'cerrar_sesion' %}">Cerrar Sesión</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success" href="{% url 'iniciar_sesion' %}">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-success" href="{% url 'registro' %}">Registrate</a>
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </div>
