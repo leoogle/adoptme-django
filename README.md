@@ -3,6 +3,7 @@ INTEGRANTES DEL EQUIPO:
 - Leonel Duran
 - Marcelo Baeza
 - Matias Marin
+- Boris Seijas
 
 https://github.com/leoogle/adoptme-django
 
